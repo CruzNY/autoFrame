@@ -12,7 +12,7 @@ public class Login extends BasePage{
 		super();
 	}
 	public Login getLoginPage() {
-		getDriver().get("http://www.demo.guru99.com/V4/");
+		getDriver().get("http://www.demo.guru99.com/V4/manager/addcustomerpage.php");
 		logger.info("Naivgating to: " + driver.getCurrentUrl());
 		return new Login();
 	}

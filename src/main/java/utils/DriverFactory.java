@@ -10,12 +10,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
 import pageObjects.Login;
+import pageObjects.NewCustomer;
 
 
 
 public class DriverFactory {
 	public static WebDriver driver;
 	public static Login login;
+	public static NewCustomer newCustomer;
 	public static Logger logger = Logger.getLogger("DriverFactory");
 	public WebDriver getDriver() {
 		try {
@@ -45,6 +47,7 @@ public class DriverFactory {
 		} finally {
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			login = PageFactory.initElements(driver, Login.class);
+			newCustomer = PageFactory.initElements(driver,NewCustomer.class);
 		}
 		return driver;
 	}
