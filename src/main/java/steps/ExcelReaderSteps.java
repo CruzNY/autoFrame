@@ -19,8 +19,19 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+ * @author Alex
+ *
+ */
+/**
+ * @author Alex
+ *
+ */
 public class ExcelReaderSteps{
-		
+		public File file;
+	public ExcelReaderSteps(){
+		file = new File("C:\\Users\\Alex\\Downloads\\dataSheets(1).xlsx");
+	}
 //	// Read excel file
 //	public void readExcel() throws IOException {
 //		try {
@@ -129,11 +140,11 @@ public class ExcelReaderSteps{
 					while(cells.hasNext()) {
 						XSSFCell cell = (XSSFCell)cells.next();
 						cell.setCellType(Cell.CELL_TYPE_STRING);
-						data.add(cell);
+						data.add(cell); 
 					}
-					hashMap.put(row.getRowNum(), data);
+					hashMap.put(row.getRowNum(), data);  // Integer and List
 				}
-				outerMap.put(sheetName, hashMap);
+				outerMap.put(sheetName, hashMap); //String and HashLinkedMap
 				hashMap = new LinkedHashMap<Integer, List>();
 			}
 		}catch(IOException e) {
@@ -145,14 +156,29 @@ public class ExcelReaderSteps{
 					fis.close();
 				}catch(IOException e) {
 					e.printStackTrace();
-				}
+				}	
 			}
 		}
 		return outerMap;
 	}
-	public void getMapValues() {
-		
+
+	/**
+	 * @param map
+	 * reads values stored in workbook sheets. 
+	 */
+	public void getMapSheet1(HashMap map, String sheetNum) {
+		System.out.println(((List)((Map)map.get("newCustomer")).get(1)).get(1)); //row then column 1:1
+//		System.out.println(map.get(sheetNum));
+//		System.out.println(((Map)map.get(sheetNum)));
 	}
+	
+	public LinkedHashMap getMapSheet(HashMap map, String sheetName) {
+		return (LinkedHashMap) map.get(sheetName);
+	}
+	
+	
+	
+	
 	
 	
 }
