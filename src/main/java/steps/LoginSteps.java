@@ -7,11 +7,6 @@ import cucumber.api.java.en.Then;
 import utils.DriverFactory;
 
 public class LoginSteps extends DriverFactory{
-	@Given("^User navigates to the login page$")
-	public void user_navigates_to_the_login_page(){
-		login.getLoginPage();
-	}
-
 	@Then("^User verifies the login page is displayed$")
 	public void user_verifies_the_login_page_is_displayed(){
 	   throw new PendingException();

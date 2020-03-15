@@ -15,11 +15,6 @@ public class Login extends BasePage{
 	public Login() {
 		super();
 	}
-	public Login getLoginPage() {
-		getDriver().get("http://www.demo.guru99.com/V4/");
-		logger.info("Naivgating to: " + driver.getCurrentUrl());
-		return new Login();
-	}
 	public Login enterEmail(String email) {
 		sendKeysToWebElement(emailFeild, email);
 		logger.info("Username: " + email);
@@ -40,7 +35,6 @@ public class Login extends BasePage{
 		return new Login();
 	}
 	public Login clickLink() throws Throwable {
-		//newCustomer.click();
 		commonSteps.user_clicks_on_something_buttonlinkicon(newCustomer);
 		return new Login();
 	}
