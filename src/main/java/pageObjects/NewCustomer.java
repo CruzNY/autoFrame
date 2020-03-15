@@ -83,7 +83,7 @@ public class NewCustomer extends BasePage{
 		
 		public void user_fills_out_form() throws IOException {
 			LinkedHashMap<Integer,List> map = excelSteps.getMapSheet(excelSteps.loadExcelLines(excelSteps.file), "newCustomer");
-			for(int i = 0; i<map.get(0).size()-1; i++) {
+			for(int i = 0; i<=map.get(0).size()-1; i++) {
 				String header = map.get(0).get(i).toString();
 				String row = map.get(1).get(i).toString();
 				formInfo.put(header, row);
