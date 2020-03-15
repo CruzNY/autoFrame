@@ -10,6 +10,7 @@ import cucumber.api.junit.Cucumber;
 		features = {"features/"},
 		glue = {"steps"},
 		tags = "@run",
+		plugin = {"pretty", "html:target/cucumber-reports/newCustomer"},
 		monochrome = true
 		)
 

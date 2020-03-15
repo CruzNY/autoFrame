@@ -8,11 +8,12 @@ public class Login extends BasePage{
 	public @FindBy(xpath = "//input[@name='password']") WebElement passwordFeild;
 	public @FindBy(xpath = "//input[@name='btnLogin']") WebElement loginButton;
 	public @FindBy(xpath= "//tr[@class='heading3']/td[text()='Manger Id : mngr249521']") WebElement homempageVerification;
+	public @FindBy(xpath= "//a[text()='New Customer']") WebElement newCustomer;
 	public Login() {
 		super();
 	}
 	public Login getLoginPage() {
-		getDriver().get("http://www.demo.guru99.com/V4/manager/addcustomerpage.php");
+		getDriver().get("http://www.demo.guru99.com/V4/");
 		logger.info("Naivgating to: " + driver.getCurrentUrl());
 		return new Login();
 	}
@@ -33,6 +34,10 @@ public class Login extends BasePage{
 	
 	public Login verifyLoginPage() {
 		login.verifyLoginPage();
+		return new Login();
+	}
+	public Login clickLink() {
+		newCustomer.click();
 		return new Login();
 	}
 }

@@ -36,4 +36,8 @@ public class LoginSteps extends DriverFactory{
 		login.homempageVerification.isDisplayed();
 		logger.info("Login Successful!");
 	}
+    @And("^User click on \"([^\"]*)\" link$")
+    public void user_click_on_something_link(String strArg1) throws Throwable {
+    	login.clickLink();
+    }
 }

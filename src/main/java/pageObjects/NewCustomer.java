@@ -21,6 +21,8 @@ public class NewCustomer extends BasePage{
 		public @FindBy(xpath = "//input[@name='telephoneno']") WebElement mobileNumberField;
 		public @FindBy(xpath = "//input[@name='emailid']") WebElement emailField;
 		public @FindBy(xpath = "//input[@name='password']") WebElement passwordField;
+		public @FindBy(xpath = "//input[@value='Submit']") WebElement submitButton;
+		public @FindBy(xpath = "//input[@value='Reset']") WebElement resetButton;
 		public NewCustomer(){
 			super();
 			try {
@@ -79,7 +81,13 @@ public class NewCustomer extends BasePage{
 			super.sendKeysToWebElement(passwordField, password);
 			return new NewCustomer();
 		}
-
+		public NewCustomer clickButton(String button) {
+			if(button.equals("Submit")) 
+				submitButton.click();
+			else
+				resetButton.click();
+			return new NewCustomer();
+		}
 		
 		public void user_fills_out_form() throws IOException {
 			LinkedHashMap<Integer,List> map = excelSteps.getMapSheet(excelSteps.loadExcelLines(excelSteps.file), "newCustomer");
