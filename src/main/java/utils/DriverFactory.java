@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import pageObjects.Login;
 import pageObjects.NewCustomer;
+import steps.CommonSteps;
 
 
 
@@ -18,6 +19,7 @@ public class DriverFactory {
 	public static WebDriver driver;
 	public static Login login;
 	public static NewCustomer newCustomer;
+	public static CommonSteps commonSteps;
 	public static Logger logger = Logger.getLogger("DriverFactory");
 	public WebDriver getDriver() {
 		try {
