@@ -28,37 +28,44 @@ public class NewCustomerSteps extends DriverFactory{
 
 	@Then("^User enters address$")
 	public void user_enters_address() throws Throwable {
-		newCustomer.enterAddress("100 Main Driver");
+//		newCustomer.enterAddress("100 Main Driver");
+		newCustomer.enterAddress(newCustomer.formInfo.get("Address"));
 	}
 
 	@Then("^User enteres city$")
 	public void user_enteres_city() throws Throwable {
-		newCustomer.enterCityFeld("Brooklyn");
+//		newCustomer.enterCityFeld("Brooklyn");
+		newCustomer.enterCityFeld(newCustomer.formInfo.get("City"));
 	}
 
 	@Then("^User enteres state$")
 	public void user_enteres_state() throws Throwable {
-		newCustomer.enterStateFeld("NY");
+//		newCustomer.enterStateFeld("NY");
+		newCustomer.enterStateFeld(newCustomer.formInfo.get("State"));
 	}
 
 	@Then("^User enteres pin$")
 	public void user_enteres_pin() throws Throwable {
-		newCustomer.enterPin("32432423");
+//		newCustomer.enterPin("32432423");
+		newCustomer.enterPin(newCustomer.formInfo.get("PIN"));
 	}
 
 	@Then("^User enteres mobile number$")
 	public void user_enteres_mobile_number() throws Throwable {
-		newCustomer.enterMobileNumber("212-545-9945");
+//		newCustomer.enterMobileNumber("212-545-9945");
+		newCustomer.enterMobileNumber(newCustomer.formInfo.get("Mobile Number"));
 	}
 
 	@Then("^User enteres email$")
 	public void user_enteres_email() throws Throwable {
-		newCustomer.enterEmail("tester@mailinator.com");		
+//		newCustomer.enterEmail("tester@mailinator.com");
+		newCustomer.enterEmail(newCustomer.formInfo.get("Email"));
 	}
 
 	
 	@Then("^User enteres password$")
 	public void user_enteres_password() throws Throwable {
-		newCustomer.enterPassword("password");
+//		newCustomer.enterPassword("password");
+		newCustomer.enterPassword(newCustomer.formInfo.get("PW"));
 	}
 }

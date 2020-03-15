@@ -79,10 +79,7 @@ public class NewCustomer extends BasePage{
 			super.sendKeysToWebElement(passwordField, password);
 			return new NewCustomer();
 		}
-		public NewCustomer fillForm() {
-			
-			return new NewCustomer();
-		}
+
 		
 		public void user_fills_out_form() throws IOException {
 			LinkedHashMap<Integer,List> map = excelSteps.getMapSheet(excelSteps.loadExcelLines(excelSteps.file), "newCustomer");
