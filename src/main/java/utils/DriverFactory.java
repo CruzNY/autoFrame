@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import pageObjects.Login;
 import pageObjects.NewCustomer;
+import pageObjects.SimpleForm;
 import steps.CommonSteps;
 
 
@@ -20,6 +21,7 @@ public class DriverFactory {
 	public static Login login;
 	public static NewCustomer newCustomer;
 	public static CommonSteps commonSteps;
+	public static SimpleForm simpleForm;
 	public static Logger logger = Logger.getLogger("DriverFactory");
 	public WebDriver getDriver() {
 		try {
@@ -50,6 +52,7 @@ public class DriverFactory {
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			login = PageFactory.initElements(driver, Login.class);
 			newCustomer = PageFactory.initElements(driver,NewCustomer.class);
+			simpleForm = PageFactory.initElements(driver, SimpleForm.class);
 		}
 		return driver;
 	}
