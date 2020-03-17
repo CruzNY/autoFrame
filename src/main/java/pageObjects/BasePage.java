@@ -5,15 +5,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import utils.DriverFactory;
+import utils.PropertyReader;
 
 public class BasePage extends DriverFactory{
 	protected WebDriverWait wait;
 	protected JavascriptExecutor jsExecutor;
-	
+	public PropertyReader prop; 
 	public BasePage() {
 		this.wait = new WebDriverWait(driver, 15);
 		jsExecutor = ((JavascriptExecutor) driver);
+		prop = new PropertyReader();
 	}
 
 	//Click Methods

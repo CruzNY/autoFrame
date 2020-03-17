@@ -2,6 +2,7 @@ package pageObjects;
 
 import static org.junit.Assert.assertEquals;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,7 +14,8 @@ public class SimpleForm extends BasePage{
 		super();
 	}
 	public SimpleForm enterMessage(String message) {
-		super.sendKeysToWebElement(messageTextBox, message);
+		WebElement element = driver.findElement(By.xpath(prop.getProperty("messageTextBox")));
+		super.sendKeysToWebElement(element, message);
 		return new SimpleForm();
 	}
 	public SimpleForm clickButton() {
