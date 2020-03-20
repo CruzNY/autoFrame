@@ -1,4 +1,4 @@
-package steps;
+package steps.common;
 
 import org.openqa.selenium.WebElement;
 

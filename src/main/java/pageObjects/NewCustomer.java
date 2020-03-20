@@ -8,7 +8,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import steps.ExcelReaderSteps;
+import steps.excelSteps.ExcelReaderSteps;
 
 public class NewCustomer extends BasePage{
 		public @FindBy(xpath = "//input[@name='name']") WebElement customerNameField;

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import pageObjects.Login;
 import pageObjects.NewCustomer;
 import pageObjects.SimpleForm;
-import steps.CommonSteps;
+import steps.common.CommonSteps;
 
 
 

@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import steps.CommonSteps;
+import steps.common.CommonSteps;
 
 public class Login extends BasePage{
 	public @FindBy(xpath = "//input[@name='uid']") WebElement emailFeild;

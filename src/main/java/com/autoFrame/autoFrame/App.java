@@ -5,7 +5,7 @@ package com.autoFrame.autoFrame;
 import java.io.File;
 import java.io.IOException;
 
-import steps.ExcelReaderSteps;
+import steps.excelSteps.ExcelReaderSteps;
 
 /**
  * Hello world!
