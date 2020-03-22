@@ -25,12 +25,4 @@ public class SimpleFormSteps extends DriverFactory{
     public void user_clicks_on_show_message_button() throws Throwable {
         simpleForm.clickButton();
     }
-	@And("^User enters \"([^\"]*)\" into \"([^\"]*)\" textbox$")
-	public void user_enters_into_textbox(String text, String elementName) throws Throwable {
-		simpleForm.sendKeysToWebElement(text,elementName);
-	}
-    @And("^User clicks on \"([^\"]*)\" button$")
-    public void user_clicks_on_something_button(String elementName) throws Throwable {
-        simpleForm.clickWebElement(elementName);
-    }
 }	

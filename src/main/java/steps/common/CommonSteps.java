@@ -1,15 +1,15 @@
 package steps.common;
 
-import org.openqa.selenium.WebElement;
-
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import pageObjects.BasePage;
+import utils.DriverFactory;
 
-public class CommonSteps extends BasePage {
-	@Given("^User navigates to the login page$")
-	public void user_navigates_to_the_login_page(){
-		getDriver().get("http://www.demo.guru99.com/V4/");
-		logger.info("Naivgating to: " + driver.getCurrentUrl());
+public class CommonSteps extends DriverFactory {
+	@And("^User enters \"([^\"]*)\" into \"([^\"]*)\" textbox$")
+	public void user_enters_into_textbox(String text, String elementName) throws Throwable {
+		simpleForm.sendKeysToWebElement(text,elementName);
 	}
+    @And("^User clicks on \"([^\"]*)\" button$")
+    public void user_clicks_on_something_button(String elementName) throws Throwable {
+        simpleForm.clickWebElement(elementName);
+    }
 }

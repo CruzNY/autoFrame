@@ -76,7 +76,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 1879706979,
+  "duration": 1961834513,
   "status": "passed"
 });
 formatter.scenario({
@@ -135,7 +135,7 @@ formatter.match({
   "location": "SimpleFormSteps.user_navigates_to_simple_form_webpage()"
 });
 formatter.result({
-  "duration": 5992019218,
+  "duration": 4964349522,
   "status": "passed"
 });
 formatter.match({
@@ -149,10 +149,10 @@ formatter.match({
       "offset": 38
     }
   ],
-  "location": "SimpleFormSteps.user_enters_into_textbox(String,String)"
+  "location": "CommonSteps.user_enters_into_textbox(String,String)"
 });
 formatter.result({
-  "duration": 233957333,
+  "duration": 222976732,
   "status": "passed"
 });
 formatter.match({
@@ -162,10 +162,10 @@ formatter.match({
       "offset": 16
     }
   ],
-  "location": "SimpleFormSteps.user_clicks_on_something_button(String)"
+  "location": "CommonSteps.user_clicks_on_something_button(String)"
 });
 formatter.result({
-  "duration": 115056028,
+  "duration": 124884778,
   "status": "passed"
 });
 formatter.match({
@@ -178,11 +178,11 @@ formatter.match({
   "location": "SimpleFormSteps.user_verifies_message_is_displayed_as_something(String)"
 });
 formatter.result({
-  "duration": 49559668,
+  "duration": 51102412,
   "status": "passed"
 });
 formatter.after({
-  "duration": 117791080,
+  "duration": 136978297,
   "status": "passed"
 });
 });
