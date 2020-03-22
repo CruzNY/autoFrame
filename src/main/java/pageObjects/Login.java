@@ -3,7 +3,7 @@ package pageObjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import steps.common.CommonSteps;
+import stepDefinitions.commonSteps.CommonSimple;
 
 public class Login extends BasePage{
 	public @FindBy(xpath = "//input[@name='uid']") WebElement emailFeild;
@@ -11,7 +11,7 @@ public class Login extends BasePage{
 	public @FindBy(xpath = "//input[@name='btnLogin']") WebElement loginButton;
 	public @FindBy(xpath= "//tr[@class='heading3']/td[text()='Manger Id : mngr249521']") WebElement homempageVerification;
 	public @FindBy(xpath= "//a[text()='New Customer']") WebElement newCustomer;
-	CommonSteps commonSteps = new CommonSteps();
+	CommonSimple commonSteps = new CommonSimple();
 	public Login() {
 		super();
 	}

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import pageObjects.Login;
 import pageObjects.NewCustomer;
 import pageObjects.SimpleForm;
-import steps.common.CommonSteps;
+import stepDefinitions.commonSteps.CommonSimple;
 
 
 
@@ -20,7 +20,7 @@ public class DriverFactory {
 	public static WebDriver driver;
 	public static Login login;
 	public static NewCustomer newCustomer;
-	public static CommonSteps commonSteps;
+	public static CommonSimple commonSteps;
 	public static SimpleForm simpleForm;
 	public static Logger logger = Logger.getLogger("DriverFactory");
 	public WebDriver getDriver() {
