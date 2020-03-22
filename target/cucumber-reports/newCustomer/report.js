@@ -26,22 +26,34 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 5,
-  "name": "User enters \"\u003cMessage\u003e\" into message textbox",
-  "keyword": "And "
-});
-formatter.step({
+  "comments": [
+    {
+      "line": 5,
+      "value": "#And User enters \"\u003cMessage\u003e\" into message textbox"
+    }
+  ],
   "line": 6,
-  "name": "User clicks on show message button",
+  "name": "User enters \"\u003cMessage\u003e\" into \"message\" textbox",
   "keyword": "And "
 });
 formatter.step({
-  "line": 7,
+  "comments": [
+    {
+      "line": 7,
+      "value": "#And User clicks on show message button"
+    }
+  ],
+  "line": 8,
+  "name": "User clicks on \"show_message\" button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
   "name": "User verifies message is displayed as \"\u003cMessage\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 9,
+  "line": 11,
   "name": "",
   "description": "",
   "id": "fill-in-simple-forms;single-field-input;",
@@ -50,25 +62,25 @@ formatter.examples({
       "cells": [
         "Message"
       ],
-      "line": 10,
+      "line": 12,
       "id": "fill-in-simple-forms;single-field-input;;1"
     },
     {
       "cells": [
         "This is a message"
       ],
-      "line": 11,
+      "line": 13,
       "id": "fill-in-simple-forms;single-field-input;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 2224228859,
+  "duration": 1879706979,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 11,
+  "line": 13,
   "name": "Single Field Input",
   "description": "",
   "id": "fill-in-simple-forms;single-field-input;;2",
@@ -87,20 +99,32 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.step({
-  "line": 5,
-  "name": "User enters \"This is a message\" into message textbox",
+  "comments": [
+    {
+      "line": 5,
+      "value": "#And User enters \"\u003cMessage\u003e\" into message textbox"
+    }
+  ],
+  "line": 6,
+  "name": "User enters \"This is a message\" into \"message\" textbox",
   "matchedColumns": [
     0
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 6,
-  "name": "User clicks on show message button",
+  "comments": [
+    {
+      "line": 7,
+      "value": "#And User clicks on show message button"
+    }
+  ],
+  "line": 8,
+  "name": "User clicks on \"show_message\" button",
   "keyword": "And "
 });
 formatter.step({
-  "line": 7,
+  "line": 9,
   "name": "User verifies message is displayed as \"This is a message\"",
   "matchedColumns": [
     0
@@ -111,7 +135,7 @@ formatter.match({
   "location": "SimpleFormSteps.user_navigates_to_simple_form_webpage()"
 });
 formatter.result({
-  "duration": 2974071733,
+  "duration": 5992019218,
   "status": "passed"
 });
 formatter.match({
@@ -119,19 +143,29 @@ formatter.match({
     {
       "val": "This is a message",
       "offset": 13
+    },
+    {
+      "val": "message",
+      "offset": 38
     }
   ],
-  "location": "SimpleFormSteps.user_enters_something_into_message_textbox(String)"
+  "location": "SimpleFormSteps.user_enters_into_textbox(String,String)"
 });
 formatter.result({
-  "duration": 267541604,
+  "duration": 233957333,
   "status": "passed"
 });
 formatter.match({
-  "location": "SimpleFormSteps.user_clicks_on_show_message_button()"
+  "arguments": [
+    {
+      "val": "show_message",
+      "offset": 16
+    }
+  ],
+  "location": "SimpleFormSteps.user_clicks_on_something_button(String)"
 });
 formatter.result({
-  "duration": 94828882,
+  "duration": 115056028,
   "status": "passed"
 });
 formatter.match({
@@ -144,11 +178,11 @@ formatter.match({
   "location": "SimpleFormSteps.user_verifies_message_is_displayed_as_something(String)"
 });
 formatter.result({
-  "duration": 60649560,
+  "duration": 49559668,
   "status": "passed"
 });
 formatter.after({
-  "duration": 111293764,
+  "duration": 117791080,
   "status": "passed"
 });
 });

@@ -34,9 +34,4 @@ public class Login extends BasePage{
 		login.verifyLoginPage();
 		return new Login();
 	}
-	public Login clickLink() throws Throwable {
-		commonSteps.user_clicks_on_something_buttonlinkicon(newCustomer);
-		return new Login();
-	}
-	
 }
