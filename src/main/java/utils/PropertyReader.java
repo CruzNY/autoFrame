@@ -15,7 +15,8 @@ public class PropertyReader extends DriverFactory{
 	}
 	
 	public void loadProperty() {
-		propertyFile = new File("C:\\Users\\Alex\\Automation\\autoFrame\\src\\main\\java\\properties\\element.properties");
+//		propertyFile = new File("C:\\Users\\Alex\\Automation\\autoFrame\\src\\main\\java\\properties\\element.properties");
+		propertyFile = new File("/home/alex/autoFrame/src/main/java/properties/element.properties");
 		try {
 			fileInput = new FileInputStream(propertyFile);
 		} catch (Exception e) {

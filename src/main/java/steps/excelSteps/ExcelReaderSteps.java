@@ -30,7 +30,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelReaderSteps{
 	public File file;
 	public ExcelReaderSteps(){
-		file = new File("C:\\Users\\Alex\\Downloads\\dataSheets(3).xlsx");
+//		file = new File("C:\\Users\\Alex\\Downloads\\dataSheets(3).xlsx");
+		file = new File("/home/alex/Downloads/dataSheets.xlsx");
 	}
 //	// Read excel file
 //	public void readExcel() throws IOException {
